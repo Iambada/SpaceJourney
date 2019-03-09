@@ -5,7 +5,7 @@ import android.content.Intent;
 import android.content.SharedPreferences;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
-import android.view.KeyEvent;
+import android.util.Log;
 import android.view.View;
 import android.widget.TextView;
 
@@ -44,16 +44,12 @@ public class Result extends AppCompatActivity {
         startActivity(new Intent(getApplicationContext(), StartGameActivity.class));
     }
 
-
-    // Disable Return Button
     @Override
-    public boolean dispatchKeyEvent(KeyEvent event) {
-        if (event.getAction() == KeyEvent.ACTION_DOWN) {
-            switch (event.getKeyCode()) {
-                case KeyEvent.KEYCODE_BACK:
-                    return true;
-            }
-        }
-        return super.dispatchKeyEvent(event);
+    public void onBackPressed() {
+        Log.d("Result view", "onBackPressed Called");
+        Intent mainScreen = new Intent(this, MainActivity.class);
+        startActivity(mainScreen);
+        return;
     }
+
 }

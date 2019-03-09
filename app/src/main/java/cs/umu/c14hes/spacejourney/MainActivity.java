@@ -1,28 +1,38 @@
 package cs.umu.c14hes.spacejourney;
 
-import android.app.Activity;
+
+import android.content.Context;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Bundle;
+import android.support.v7.app.AppCompatActivity;
 import android.view.View;
-import android.view.Window;
-import android.view.WindowManager;
+import android.widget.TextView;
 
-public class MainActivity extends Activity {
-
+public class MainActivity extends AppCompatActivity {
+    Intent gameIntent;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN,WindowManager.LayoutParams.FLAG_FULLSCREEN);
-        this.requestWindowFeature(Window.FEATURE_NO_TITLE);
         setContentView(R.layout.activity_main);
-        //setContentView(new GameView(this));
     }
-
+    public void onStart() {
+        super.onStart();
+        TextView highScore = (TextView) findViewById(R.id.highScore);
+        gameIntent = new Intent(this, StartGameActivity.class);
+        SharedPreferences settings = getSharedPreferences("HIGH_SCORE", Context.MODE_PRIVATE);
+        int score = settings.getInt("HIGH_SCORE", 0);
+        highScore.setText("High Score : " + score);
+    }
     public void onClickedNewGame(View view) {
-
         Intent gameIntent = new Intent(this, StartGameActivity.class);
         startActivity(gameIntent);
     }
+
+    public void onClickedResume(View view) {
+        startActivity(gameIntent);
+    }
+
     public void onClickedHowToPlay (View view) {
 
         Intent htpIntent = new Intent(this, UserGuideActivity.class);

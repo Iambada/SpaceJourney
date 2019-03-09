@@ -1,6 +1,6 @@
 <resources>
     <string name="app_name">raindrops</string>
-    <string name="userguide_controls"> Controls: \nTo move Bill use the tilting functionality in your phone to make Bill move in the direction that you want. Bill can only move horizontally, so keep that in mind.</string>
-    <string name="userguide_description"> You play as the drifting austronaut Bill. Bill is drifting in space when a meteriorite rain occurs. Bill wants to get home to his family, so help him survive.</string>
+    <string name="userguide_controls"> To move Bill use the tilting functionality in your phone to make Bill move in the direction that you want. Bill can only move horizontally, so keep that in mind.</string>
+    <string name="userguide_description"> You play as the drifting astronaut Bill. Bill is drifting in space when a meteorite rain occurs. Bill wants to get home to his family, so help him survive.</string>
     <string name="userguide_title">How To Play</string>
 </resources>
