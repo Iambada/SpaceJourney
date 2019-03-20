@@ -6,11 +6,15 @@ import android.content.Intent;
 import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
+import android.util.Log;
+import android.view.KeyEvent;
 import android.view.View;
+import android.widget.Button;
 import android.widget.TextView;
 
 public class MainActivity extends AppCompatActivity {
     Intent gameIntent;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -25,11 +29,7 @@ public class MainActivity extends AppCompatActivity {
         highScore.setText("High Score : " + score);
     }
     public void onClickedNewGame(View view) {
-        Intent gameIntent = new Intent(this, StartGameActivity.class);
-        startActivity(gameIntent);
-    }
-
-    public void onClickedResume(View view) {
+        gameIntent = new Intent(this, StartGameActivity.class);
         startActivity(gameIntent);
     }
 
@@ -37,5 +37,18 @@ public class MainActivity extends AppCompatActivity {
 
         Intent htpIntent = new Intent(this, UserGuideActivity.class);
         startActivity(htpIntent);
+    }
+
+    public void onClickedAbout (View view) {
+
+        Intent aboutIntent = new Intent(this, About.class);
+        startActivity(aboutIntent);
+    }
+    @Override
+    public void onBackPressed() {
+        super.onBackPressed();
+        Log.d("MainActivity", "Back button pressed");
+
+        //startActivity(new Intent(this, MainActivity.class));
     }
 }

@@ -3,6 +3,8 @@ package cs.umu.c14hes.spacejourney;
 import android.content.res.Resources;
 import android.graphics.Bitmap;
 import android.graphics.Canvas;
+import android.os.Parcel;
+import android.os.Parcelable;
 
 
 public class CharacterSprite {

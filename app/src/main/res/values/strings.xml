@@ -1,6 +1,11 @@
 <resources>
-    <string name="app_name">raindrops</string>
-    <string name="userguide_controls"> To move Bill use the tilting functionality in your phone to make Bill move in the direction that you want. Bill can only move horizontally, so keep that in mind.</string>
-    <string name="userguide_description"> You play as the drifting astronaut Bill. Bill is drifting in space when a meteorite rain occurs. Bill wants to get home to his family, so help him survive.</string>
+    <string name="app_name">Space Journey</string>
+    <string name="userguide_controls"> To move Bill use the tilting functionality in your phone to make Bill move in the direction that you want.\n\n By tilting your device to the left Bill will move to the left of the screen.\n\n Bill can only move horizontally, so keep that in mind.</string>
+    <string name="userguide_description">This game is created by Henrik Erskérs during a course @ Umeå University\n\nThe purpose of the game is to survive as long as possible in the hope that someone will save you
+    from drifting in space.\n\n\nYou play as the astronaut Bill, Bills spaceship got hit by a meteor and is now drifting in space.
+    Bill sent out a distress signal as the ship got hit and are hoping that someone is receiving the signal and will come to the
+    rescue. Bill wants to get home to his family, so help him survive by avoiding the meteors.</string>
     <string name="userguide_title">How To Play</string>
 </resources>
+
+

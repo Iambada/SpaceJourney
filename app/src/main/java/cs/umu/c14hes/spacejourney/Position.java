@@ -1,7 +1,11 @@
 package cs.umu.c14hes.spacejourney;
 
+import android.os.Parcel;
+import android.os.Parcelable;
+
 public class Position {
-    private int x,y;
+    private float x;
+    private float y;
     public Position(){
         x = 0;
         y = 0;
@@ -12,19 +16,19 @@ public class Position {
         this.y = y;
     }
 
-    public int getX() {
+    public float getX() {
         return x;
     }
 
-    public void setX(int x) {
+    public void setX(float x) {
         this.x = x;
     }
 
-    public int getY() {
+    public float getY() {
         return y;
     }
 
-    public void setY(int y) {
+    public void setY(float y) {
         this.y = y;
     }
 }
